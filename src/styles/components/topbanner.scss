@@ -1,4 +1,4 @@
-.TopBanner{
+.TopBanner {
     position: fixed;
     width: 100%;
     background-color: var(--secondary);
@@ -6,18 +6,29 @@
     color: #fff;
     text-align: center;
     z-index: 4;
-    .swiper{
+
+    .swiper {
         height: 100%;
-        a{
+
+        a {
             display: block;
             height: 100%;
             line-height: 4rem;
         }
     }
-    .closeBtn{
+
+    .closeBtn {
         position: absolute;
         right: 2rem;
         z-index: 5;
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.5rem;
+        height: 1.5rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        font-size: 0;
+        cursor: pointer;
     }
 }
