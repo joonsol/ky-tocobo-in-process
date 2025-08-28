@@ -10,23 +10,31 @@ import "./styles/main.scss"
 import TopBanner from "./components/TopBanner"
 import { useState } from "react"
 import TopBtn from "./components/TopBtn"
+import Hello from "./sections/Hello"
 function App() {
 
-  const [topBanner,setTopBanner]=useState("")
+  const [topBanner, setTopBanner] = useState("")
 
-  const upTopBanner =()=>{
+  const upTopBanner = () => {
     setTopBanner("up")
   }
 
   return (
     <div className={`app-container  ${topBanner}`}>
-      <TopBtn/>
-      <TopBanner onClick={upTopBanner}/>
+      <TopBtn />
+      <TopBanner onClick={upTopBanner} />
       <Header />
       <main>
         <section id="Hero" className="Section">
           <Hero />
         </section>
+        <section id="Cta" className="Section">
+          <Cta />
+        </section>
+        <section id="Hello" className="Section">
+          <Hello /> 
+        </section>
+
         <section id="Brand" className="Section">
           <Brand />
         </section>
@@ -36,9 +44,7 @@ function App() {
         <section id="Reviews" className="Section">
           <Reviews />
         </section>
-        <section id="Cta" className="Section">
-          <Cta />
-        </section>
+
       </main>
       <Footer />
     </div>
