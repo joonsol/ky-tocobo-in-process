@@ -11,6 +11,7 @@ import TopBanner from "./components/TopBanner"
 import { useState,useEffect } from "react"
 import TopBtn from "./components/TopBtn"
 import Hello from "./sections/Hello"
+import Collection from "./sections/Collection"
 function App() {
 
   const [topBanner, setTopBanner] = useState("")
@@ -50,8 +51,8 @@ function App() {
           <Hello /> 
         </section>
 
-        <section id="Brand" className="Section">
-          <Brand />
+        <section id="Collection" className="Section">
+          <Collection />
         </section>
         <section id="Products" className="Section">
           <Products />
