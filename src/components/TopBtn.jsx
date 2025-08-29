@@ -4,7 +4,7 @@ import useSmoothScroll from '../hooks/useSmoothScroll'
 const TopBtn = () => {
   const scrollTo = useSmoothScroll()
   return (
-    <div>
+    <div className='fixed-top'>
       {/* icon_top.svg */}
       <button
         onClick={(e) => {
