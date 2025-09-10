@@ -1,6 +1,6 @@
 import React from 'react'
 import instar from "../util/instar"
-import "../styles/components/instargram.scss"
+import "../styles/sections/instargram.scss"
 const Instargram = () => {
   return (
     <div className='inner instar-inner'>
