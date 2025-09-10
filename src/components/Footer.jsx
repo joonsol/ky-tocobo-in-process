@@ -1,6 +1,5 @@
 import React from 'react';
 import { logoData, companyData, customerCenterData, footerMenus } from "../util/footer";
-import Nav from './Nav';
 import "../styles/components/footer.scss"
 
 const Footer = () => {
