@@ -11,10 +11,11 @@ const Header = ({ mNavOpen, onNavOpen, onNavClose }) => {
   const scrollTo = useSmoothScroll()
 
   const handleClick = (e, item) => {
-    if(item.type==='section'){
+    if (item.type === 'section') {
       e.preventDefault()
-      const id =item.herf?.startWith('#')? item.herf.slice(1):item.id
+      const id = item.href?.startsWith('#') ? item.href.slice(1) : item.id
       scrollTo(id)
+      onNavClose?.() // 모바일 메뉴라면 닫기
     }
   }
   return (
@@ -24,8 +25,8 @@ const Header = ({ mNavOpen, onNavOpen, onNavClose }) => {
       <header>
         <div className="inner">
           <Nav
-          handleClick={handleClick}
-          onNavOpen={onNavOpen}
+            handleClick={handleClick}
+            onNavOpen={onNavOpen}
           />
           <h1 className="tit">
             <a href={headerLogo.href}>
@@ -37,9 +38,9 @@ const Header = ({ mNavOpen, onNavOpen, onNavClose }) => {
 
       </header>
       {mNavOpen && (
-        <MNav 
-         handleClick={handleClick}
-        onNavClose={onNavClose}
+        <MNav
+          handleClick={handleClick}
+          onNavClose={onNavClose}
         />
       )}
     </div>

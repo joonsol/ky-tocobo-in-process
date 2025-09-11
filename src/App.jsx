@@ -28,6 +28,11 @@ function App() {
       easing: 'ease', // default easing for AOS animations
     });
   }, [])
+  useEffect(() => {
+    document.body.style.overflow = mNavOpen ? 'hidden' : ''
+  }, [mNavOpen])
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,11 +44,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
 
   })
-
-  useEffect(() => {
-    document.body.style.overflow = mNavOpen ? 'hidden' : ''
-  }, [mNavOpen])
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 1111) setMNavOpen(false)

@@ -5,11 +5,15 @@ import Util from './Util'
 const MNav = ({ handleClick, onNavClose }) => {
     const navLink = headerData.menus
     return (
-        <div className='m-nav-wrap'>
+        <div className='m-nav-wrap' onClick={(e) => e.stopPropagation()}>
             <div className="m-top">
                 <Util />
                 <a href="#"
-                    onClick={onNavClose}
+                    onClick={(e) => {
+                        e.preventDefault()     // ✅ 맨 위 점프 방지
+                        e.stopPropagation()
+                        onNavClose()
+                    }}
                     className="m-close-btn">
                     <img src="/img/icon_search_close.png" alt="icon" />
                 </a>
